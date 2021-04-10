@@ -8,7 +8,7 @@ import java.util.List;
 public class LiquorService {
 
     public List<String> getAvailableBrands(LiquorType type) {
-        List<String> brands = new ArrayList<String>();
+        List<String> brands = new ArrayList<>();
         if (type.equals(LiquorType.WINE)) {
             brands.add("Orin Swift");
             brands.add("Caymus Vineyards");
@@ -25,9 +25,9 @@ public class LiquorService {
     }
 
 
-//    public static void main(String[] args) {
-//        LiquorService test = new LiquorService();
-//        var tester = test.getAvailableBrands(LiquorType.WHISKEY);
-//        System.out.println(tester);
-//    }
+    public static void main(String[] args) {
+        LiquorService test = new LiquorService();
+        var tester = test.getAvailableBrands(LiquorType.WHISKEY);
+        System.out.println(tester);
+    }
 }
