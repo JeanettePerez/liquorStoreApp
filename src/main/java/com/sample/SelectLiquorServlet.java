@@ -24,10 +24,9 @@ public class SelectLiquorServlet extends HttpServlet {
         LiquorService liquorService = new LiquorService();
         LiquorType brandType = LiquorType.valueOf(liquorType);
 
-        List liquorBrands = liquorService.getAvailableBrands(brandType);
+        var liquorBrands = liquorService.getAvailableBrands(brandType);
 
         req.setAttribute("brands", liquorBrands);
-        RequestDispatcher view = req.getRequestDispatcher("result.jsp");
-        view.forward(req,resp);
+        req.getRequestDispatcher("results.jsp").forward(req,resp);
     }
 }
