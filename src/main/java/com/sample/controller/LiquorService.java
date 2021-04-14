@@ -1,4 +1,4 @@
-package com.sample;
+package com.sample.controller;
 
 import com.sample.model.LiquorType;
 
