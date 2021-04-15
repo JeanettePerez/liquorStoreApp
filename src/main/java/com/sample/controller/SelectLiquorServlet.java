@@ -9,13 +9,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(
-        name = "selectliquorservlet",
-        urlPatterns = "/SelectLiquor"
-)
+@WebServlet("/SelectLiquor")
 public class SelectLiquorServlet extends HttpServlet {
+  @Override
+  protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    req.getRequestDispatcher("/WEB-INF/inventory.jsp").forward(req,resp);
+  }
 
-    @Override
+  @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String liquorType = req.getParameter("Type");
 
