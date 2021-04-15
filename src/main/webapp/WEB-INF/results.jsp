@@ -14,8 +14,6 @@
 </head>
 <body>
 <h1>Available Brands</h1>
-<c:forEach var="brand" items="${brands}">
-  <h1>${brand.brand}</h1>
-</c:forEach>
+
 </body>
 </html>
