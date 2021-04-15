@@ -14,7 +14,22 @@
 </head>
 <body>
 <jsp:include page="partials/navBar.jsp" />
+<form method="POST" action="${pageContext.request.contextPath}/login">
+  <fieldset class="container">
+    <div>
+      <label for="username">Username</label>
+      <input id="username" type="text" name="username" placeholder="Enter Your Username">
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <input id="password" type="password" name="password" placeholder="Enter Your Password">
+    </div>
+    <div>
+      <button type="submit">Log In</button>
+    </div>
+  </fieldset>
 
+</form>
 
 </body>
 </html>
